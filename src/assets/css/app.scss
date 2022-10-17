@@ -1,0 +1,16 @@
+@import "tailwindcss/base";
+@import "tailwindcss/utilities";
+@import "tailwindcss/components";
+
+@import "global/form";
+
+@import "components/card";
+@import "components/buttons";
+
+body {
+  color: #fff;
+}
+
+h1 {
+  @apply text-3xl font-bold;
+}

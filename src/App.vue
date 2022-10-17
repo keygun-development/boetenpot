@@ -1,26 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="bg-blue-400 h-screen">
+    <div class="flex flex-col justify-center items-center h-screen">
+      <h1>
+        Boetenpot App
+      </h1>
+      <form class="mt-4 c-card">
+        <p>
+          Naam:
+        </p>
+        <input name="name" />
+        <div class="mt-4">
+          <p>
+            Groepscode:
+          </p>
+          <input name="groupcode" />
+        </div>
+        <div class="mt-4">
+          <input class="c-button c-button--blue w-full" type="submit" :value="'Join'" />
+        </div>
+      </form>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
-</style>
+
+</script>
