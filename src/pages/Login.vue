@@ -38,10 +38,12 @@ export default {
                   const userSnap = getDoc(userRef)
                   const userdata = (await userSnap).data()
 
-                  for(let i=0; i<userdata.length; i++) {
-                    if(result.user.uid === userdata[i].id) {
-                      let params = new URLSearchParams(window.location.search)
-                      params.get('redirect_to') ? router.push(params.get('redirect_to')) : router.push('/')
+                  if(userdata.length > 0) {
+                    for(let i=0; i<userdata.length; i++) {
+                      if(result.user.uid === userdata[i].id) {
+                        let params = new URLSearchParams(window.location.search)
+                        params.get('redirect_to') ? router.push(params.get('redirect_to')) : router.push('/')
+                      }
                     }
                   }
 
