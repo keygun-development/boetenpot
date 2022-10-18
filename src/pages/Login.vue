@@ -38,7 +38,7 @@ export default {
                   const userSnap = getDoc(userRef)
                   const userdata = (await userSnap).data()
 
-                  if(userdata.length > 0) {
+                  if(userdata) {
                     for(let i=0; i<userdata.length; i++) {
                       if(result.user.uid === userdata[i].id) {
                         let params = new URLSearchParams(window.location.search)
